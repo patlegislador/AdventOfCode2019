@@ -14,6 +14,9 @@ while (intcode[0] !== 19690720) {
     runCode();
 }
 
+console.log('Result: ' + intcode)
+
+
 function runCode() {
     if (intcode[pointer] === 1) {
         addOpcode();
@@ -29,8 +32,6 @@ function runCode() {
         return;
     }
 }
-
-console.log('Result: ' + intcode)
 
 function addOpcode() {
     input = intcode[intcode[pointer + 1]]
